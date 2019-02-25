@@ -11,13 +11,13 @@ public class Timings {
 		Date date= new Date();
 		long time = date.getTime();
 		this.startTime = time;
-		System.out.print("Start time is: "+this.startTime+"\n");
+		System.out.println("Start time is: " +date.toString());
 	}
 	public void setEndTime(){
 		Date date= new Date();
 		long time = date.getTime();
 		this.endTime = time;
-		System.out.print("End time is: "+this.endTime+"\n");
+		System.out.println("End time is: "+date.toString);
 	}
 	public long getStartTime(){
 		return this.startTime;
