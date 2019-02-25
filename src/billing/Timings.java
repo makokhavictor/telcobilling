@@ -17,7 +17,7 @@ public class Timings {
 		Date date= new Date();
 		long time = date.getTime();
 		this.endTime = time;
-		System.out.println("End time is: "+date.toString);
+		System.out.println("End time is: "+date.toString());
 	}
 	public long getStartTime(){
 		return this.startTime;
