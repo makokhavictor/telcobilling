@@ -1,4 +1,5 @@
-package billing;
+package bp;
+
 import java.util.Date;
 //import java.sql.Timestamp;
 
@@ -11,7 +12,7 @@ public class Timings {
 		Date date= new Date();
 		long time = date.getTime();
 		this.startTime = time;
-		System.out.println("Start time is: " +date.toString());
+		System.out.println("Start time is: "+date.toString());
 	}
 	public void setEndTime(){
 		Date date= new Date();
