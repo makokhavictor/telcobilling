@@ -1,5 +1,7 @@
-package billing;
-import java.util.Scanner;
+
+package bp;
+
+import javax.swing.JOptionPane;
 
 public class Home {
 
@@ -8,26 +10,22 @@ public class Home {
 		
 		Timings timings = new Timings();
 		
-		Scanner input = new Scanner(System.in);
+		int startCall= JOptionPane.showConfirmDialog(null, "Start call?", "Call",JOptionPane.YES_NO_OPTION);
 		
-		System.out.print("Start call? [yes/no]");
-		String start = input.next();
-		
-		if(start.equalsIgnoreCase("yes")){
+		if(startCall == JOptionPane.YES_OPTION) {
 			timings.setStartTime();
-			System.out.print("End call? [yes/no]");
-			String end = input.next();
-			if(end.equalsIgnoreCase("yes")){
+		int endCall= JOptionPane.showConfirmDialog(null, "End call? Please press yes when done with call", "Calling",JOptionPane.YES_OPTION);
+                        
+			if(endCall == JOptionPane.YES_OPTION){
 				timings.setEndTime();
 				Charges charges = new Charges(timings.getStartTime(),timings.getEndTime());
 				charges.setChargePerMinute();
+                                System.out.println("Great! Keepon talking!");
+			}                
 			}else{
-				System.out.print("Great, keep on talking! We appreciate your generosity :-)");
-			}
-			
-		}else{
-			System.out.print("Great, have a lovely day Bye! :-)");
+			JOptionPane.showMessageDialog(null, "Great, have a lovely day Bye! :-)"); 
 		}
 	}
 
-}
+    }
+
